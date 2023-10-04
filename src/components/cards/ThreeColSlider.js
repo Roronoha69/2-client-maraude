@@ -4,7 +4,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 import HumanIcon from "../../images/classic/human.png";
-
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons";
 import { ReactComponent as PriceIcon } from "feather-icons/dist/icons/dollar-sign.svg";
@@ -102,7 +101,7 @@ export default () => {
   useEffect(() => {
     
     
-    fetch('http://localhost:3000/maraudes')
+    fetch('http://localhost:5000/maraudes')
     
       .then(response => response.json())
       .then(data => {
@@ -117,14 +116,12 @@ export default () => {
 
   const photos = 
 {   
-  
   Arras: "https://www.epsi.fr/wp-content/uploads/2017/03/EPSI-Arras.jpg",
   Auxerre : "https://www.epsi.fr/wp-content/uploads/2018/11/yt_tresors_auxerre_copyright-teddy-bear-2.jpg",
   Lyon: "https://www.epsi.fr/wp-content/uploads/2017/02/campus-lyon.jpg",
   Paris: "https://www.epsi.fr/wp-content/uploads/2017/03/campus_BD.jpg",
   Rennes : "https://www.epsi.fr/wp-content/uploads/2019/11/rennes-1.jpg",
   Marseille: "https://lp-cms-production.imgix.net/2019-06/GettyImages-160292245_medium.jpg"
-
 }
     
 
@@ -168,7 +165,6 @@ export default () => {
 
 // https://www.epsi.fr/wp-content/uploads/2017/03/campus_BD.jpg
 
-
 // https://www.epsi.fr/wp-content/uploads/2017/03/campus_BD.jpg
 
 // https://www.epsi.fr/wp-content/uploads/2019/11/rennes-1.jpg
@@ -208,12 +204,12 @@ export default () => {
                     <IconContainer>
                       <PriceIcon />
                     </IconContainer>
-                    <Text>Budget {card.money}€</Text>
+                    <Text>Collecté: {card.money}€</Text>
                   </IconWithText>
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton><a href={`maraudes/${index}`}>Contribuer</a> </PrimaryButton>
+              <a href={`maraude/${index}`}><PrimaryButton>Contribuer </PrimaryButton></a>
             </Card>
           ))}
         </CardSlider>

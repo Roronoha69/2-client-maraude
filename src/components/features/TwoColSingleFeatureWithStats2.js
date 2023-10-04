@@ -34,18 +34,20 @@ const Value = tw.div`font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500
 const Key = tw.div`font-medium text-primary-700`;
 
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
+const PrimaryButton2 = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-blue-500`;
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`
 ]);
 
 export default ({
-  subheading = "Our Track Record",
+  
   heading = (
     <>
       We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
     </>
   ),
+  subheading = "Our Track Record",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
@@ -86,8 +88,9 @@ export default ({
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
+          
             <Heading>{heading}</Heading>
+            {subheading && <Subheading>{subheading}</Subheading>}
             <Description>{description}</Description>
             <Statistics>
               {statistics.map((statistic, index) => (
@@ -98,8 +101,11 @@ export default ({
               ))}
             </Statistics>
             <PrimaryButton as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
+              Rejoindre
             </PrimaryButton>
+            <PrimaryButton2 style={{ marginLeft: "2vw" }} as="a" href="/">
+              Faire un don
+            </PrimaryButton2>
           </TextContent>
         </TextColumn>
       </TwoColumn>

@@ -76,7 +76,7 @@ export default ({
   return (
     <>
       <Header />
-      <Container>
+      {/* <Container>
         <TwoColumn>
           <LeftColumn>
             <Heading>{heading}</Heading>
@@ -117,7 +117,7 @@ export default ({
             <ResponsiveVideoEmbed url={watchVideoYoutubeUrl} tw="w-full" />
           </div>
         </StyledModal>
-      </Container>
+      </Container> */}
     </>
   );
 };
