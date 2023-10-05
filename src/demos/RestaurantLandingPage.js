@@ -33,7 +33,23 @@ export default () => {
   const [money, setMoney] = useState()
 
   useEffect(() => {
-    const id = 1;
+    const url = window.location.href
+    const lastCharacter = url.charAt(url.length - 1);
+    const last2Character = url.charAt(url.length - 2);
+    let id = null;
+
+    if (last2Character == "/") {
+      id = lastCharacter;
+      console.log(id)
+    } 
+    else { 
+      id = last2Character + lastCharacter
+      console.log(id)
+    }
+
+    console.log(id)
+    
+    
     fetch(
     `http://localhost:5000/maraudes/${id}`
     )

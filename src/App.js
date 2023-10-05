@@ -107,6 +107,8 @@ import ThankYouPage from "ThankYouPage.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RestaurantLandingPage from "demos/RestaurantLandingPage";
 import RestaurantLandingPage2 from "demos/RestaurantLandingPage2";
+import RestaurantLandingPage3 from "demos/RestaurantLandingPage3";
+
 
 
 export default function App() {
@@ -122,6 +124,8 @@ export default function App() {
         <Route path="/" element={<HotelTravelLandingPage />} />
         <Route path="/maraude/:id" element={<RestaurantLandingPage />} />
         <Route path="/creer-maraude" element={<RestaurantLandingPage2 />} />
+        <Route path="/all-maraudes" element={<RestaurantLandingPage3 />} />
+
         </Routes>
       </Router>
     </>

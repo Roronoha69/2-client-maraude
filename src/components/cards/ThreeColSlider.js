@@ -74,6 +74,7 @@ export default () => {
     arrows: false,
     slidesToShow: 3,
     responsive: [
+      
       {
         breakpoint: 1280,
         settings: {
@@ -180,7 +181,6 @@ export default () => {
           </Controls>
         </HeadingWithControl>
 
-      
         <CardSlider ref={setSliderRef} {...sliderSettings}>
           {maraudes?.map((card, index) => (
             <Card key={index}>
